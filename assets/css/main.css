@@ -1,0 +1,272 @@
+@charset "UTF-8";
+/*Aquí van los breakspoints */
+.container {
+  position: relative;
+  text-align: center;
+  /* max-width: 90%; */
+  /* background-color: rgb(211, 211, 211); */
+  margin: auto;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a, a:hover, a:focus, a:active {
+  text-decoration: none;
+  color: black;
+}
+
+body {
+  font-family: "Mukta", sans-serif;
+}
+
+/* Parte de las tarjetas 1-6 */
+.main {
+  text-align: center;
+  margin: 5px 10px;
+}
+
+.main__tarj {
+  max-width: 80% px;
+  /* max-height: auto; */
+  margin: 5px 10px;
+  /* border: 2px solid #000; */
+}
+.main__tarj--titulo {
+  font-size: 1.25rem;
+  line-height: 1.2;
+  text-align: left;
+  margin-left: 10px;
+}
+.main__tarj--imagen img {
+  max-width: 95%;
+}
+
+/* sección de barra lateral aside */
+.aside__notas--item img {
+  max-width: 90%;
+}
+
+.aside {
+  margin: 5px 5px;
+  padding-left: 1em;
+}
+.aside__nosotros {
+  text-align: left;
+}
+.aside__nosotros h1 {
+  font-size: 1.875rem;
+}
+.aside__nosotros p {
+  padding-bottom: 1em;
+  border-bottom: 1px solid #000;
+}
+.aside__tags {
+  padding-bottom: 1em;
+  border-bottom: 1px solid #000;
+}
+.aside__tags h1 {
+  font-size: 1.875rem;
+  text-align: left;
+}
+.aside__tags li {
+  display: inline-block;
+  margin-right: 3px;
+  padding: 0 10px;
+  text-align: left;
+  color: #fff;
+  background-color: #104077;
+}
+.aside__notas {
+  margin-top: 3em;
+}
+.aside__notas h1 {
+  font-size: 1.875rem;
+  text-align: left;
+}
+.aside__notas--item {
+  text-align: left;
+}
+.aside__notas--item h4 {
+  font-size: 1rem;
+}
+
+/* sección del pie de página */
+.footer__text {
+  font-size: 1.25rem;
+  background-color: #a8a8a8;
+  padding: 1em;
+}
+.footer__text p {
+  font-size: 1rem;
+}
+.footer__boton {
+  padding: 10px 5px;
+}
+.footer__boton--sus {
+  margin-right: 5px;
+  padding: 5px 5px;
+  border: 1px solid #000;
+  border-radius: 4px;
+}
+.footer__boton button {
+  width: 6em;
+  height: 2em;
+  border: 0;
+  background-color: #ca4726;
+  color: #fff;
+}
+.footer__der {
+  background-color: #fff;
+  padding: 1em;
+}
+
+/* Barra de navegación */
+.navbar {
+  margin: 5px 5px;
+  padding: 10px 10px;
+  border-bottom: 1px solid #a8a8a8;
+  display: flex;
+  align-items: center;
+}
+.navbar__logo h3 {
+  font-family: "Mochiy Pop P One", sans-serif;
+  font-size: 1.875rem;
+}
+.navbar__menu {
+  margin-left: auto;
+  /* background-color: coral; */
+}
+.navbar__menu--1 {
+  display: inline-block;
+  padding: 10px;
+}
+.navbar__menu--2 {
+  display: inline-block;
+  padding: 10px;
+}
+.navbar__busca {
+  margin: 20px;
+}
+.navbar__busca--input {
+  padding-left: 5px;
+  border: 1px solid #000;
+  border-radius: 10px;
+}
+
+/*Definición de grid-áreas*/
+.navbar {
+  grid-area: navbar;
+  /* background-color: #95c29d; */
+}
+
+.main {
+  grid-area: main;
+  /* background-color: #e4e690; */
+}
+
+.aside {
+  grid-area: aside;
+  /* background-color: #8e98ee; */
+}
+
+.footer {
+  grid-area: footer;
+  background-color: #a8a8a8;
+}
+
+/* Definir grilla para escritorio superior a 996 */
+.container {
+  width: 98%;
+  height: 100%;
+  margin: 0 auto;
+  max-width: 1200px;
+  /* background-color:rgb(94, 5, 5); */
+  display: grid;
+  gap: 0px;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 100px auto auto auto;
+  grid-template-areas: "navbar navbar navbar navbar navbar navbar navbar navbar navbar navbar navbar navbar" "main main main main main main main main main aside aside aside" "footer footer footer footer footer footer footer footer footer footer footer footer";
+}
+
+/* Grilla donde van las tarjetas */
+.main {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: 38% 38%;
+}
+
+/* ---Media query tamaño tablet < de 992 ---*/
+@media (max-width: 992px) {
+  .aside {
+    display: none;
+  }
+
+  .container {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 100px auto auto;
+    grid-template-areas: "navbar navbar navbar navbar" "main main main main" "footer footer footer footer";
+  }
+
+  .main__tarj {
+    max-height: 530px;
+    margin: 10px 20px;
+    /* border: 2px solid #000; */
+  }
+
+  .main {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto;
+  }
+}
+/*Media query tamaño móvil < de 768px */
+@media (max-width: 768px) {
+  .aside {
+    display: none;
+  }
+
+  .navbar__menu--1 {
+    display: none;
+  }
+
+  .main {
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+}
+/*Media query tamaño small < de 576 */
+@media (max-width: 576px) {
+  .aside {
+    display: none;
+  }
+
+  .navbar__menu--1 {
+    display: none;
+  }
+
+  .navbar__menu--2 {
+    display: none;
+  }
+
+  .main {
+    display: grid;
+    grid-template-columns: auto;
+  }
+
+  .main__tarj {
+    max-width: 100%;
+    max-height: 550px;
+    margin: 10px 20px;
+    /* border: 2px solid #000; */
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,37 @@
+/* Barra de navegación */
+.navbar {
+  margin: 5px 5px;
+  padding: 10px 10px;
+  border-bottom: 1px solid $gris;
+  display: flex;
+  align-items: center;
+
+  &__logo h3{
+      font-family: $mochily;
+      @include relative-converter(font-size, rem, $xx-large, 16);
+  }
+  &__menu {
+      margin-left: auto;
+      /* background-color: coral; */
+      
+      
+    &--1 {
+        display: inline-block;
+        padding: 10px;  
+    }
+    &--2 {
+        display: inline-block;
+        padding: 10px;  
+    }
+
+  }
+  &__busca{
+margin: 20px;
+
+&--input{
+    padding-left: 5px;
+    border:1px solid #000;
+border-radius: 10px;
+}
+  }
+}

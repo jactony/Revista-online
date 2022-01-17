@@ -1,0 +1,9 @@
+@mixin relative-converter($property, $unit, $target, $context) {
+    $result: calc($target / $context);
+    #{$property}: #{$result + $unit};
+}
+
+/*Aquí van los breakspoints */
+
+
+  

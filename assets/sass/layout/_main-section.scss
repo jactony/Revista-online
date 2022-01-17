@@ -1,0 +1,120 @@
+/* Parte de las tarjetas 1-6 */
+
+.main{
+    text-align: center;
+    
+    margin: 5px 10px;
+}
+
+.main__tarj{
+    max-width: 80%px;
+    /* max-height: auto; */
+    margin: 5px 10px;
+    /* border: 2px solid #000; */
+
+    &--titulo{
+        @include relative-converter(font-size, rem, $x-large, 16);
+        line-height: 1.2;
+        text-align: left;
+        margin-left: 10px;
+    }
+    &--imagen img{
+        max-width: 95%;
+    }
+}
+
+/* sección de barra lateral aside */
+.aside__notas--item img{
+    max-width: 90%;
+}
+
+.aside{
+    margin: 5px 5px;
+    padding-left: 1em;
+
+    &__nosotros{
+        text-align: left;
+        
+    }
+    
+    &__nosotros h1{
+        @include relative-converter(font-size, rem, $xx-large, 16);
+    }
+    &__nosotros p{
+        padding-bottom: 1em;
+        border-bottom: 1px solid #000;
+    }
+    &__tags{
+        padding-bottom: 1em;
+        border-bottom: 1px solid #000;
+    }
+    &__tags h1{
+        @include relative-converter(font-size, rem, $xx-large, 16);
+        text-align: left;
+    }
+    &__tags li{
+        display: inline-block;
+        margin-right: 3px;
+        padding: 0 10px;
+        text-align: left;
+        color: #fff;
+        background-color: rgb(16, 64, 119);  
+    }
+    &__notas{
+        margin-top: 3em;
+            
+    }
+    &__notas h1{
+        @include relative-converter(font-size, rem, $xx-large, 16);
+        text-align: left;
+
+    }
+    &__notas--item{
+        text-align: left;
+    }
+    &__notas--item h4{
+        @include relative-converter(font-size, rem, $medium, 16);
+    }
+   
+}
+
+
+/* sección del pie de página */
+.footer{
+
+&__text{
+    @include relative-converter(font-size, rem, $x-large, 16);
+    background-color: $gris;
+    padding: 1em;
+
+    
+}
+&__text p{
+    @include relative-converter(font-size, rem, $medium, 16);
+}
+
+&__boton{
+    padding: 10px 5px;
+    &--sus{
+        margin-right: 5px;
+        padding: 5px 5px;
+        border:1px solid #000;
+        border-radius: 4px;
+
+    }
+    button{
+        width: 6em;
+        height: 2em;
+        border: 0;
+        background-color: $naranjo;
+        color: #fff;
+        
+    }
+   
+   
+}
+ &__der{
+        background-color: #fff;
+        padding: 1em;
+    }
+}
